@@ -1,0 +1,35 @@
+<h1>Add new product</h1>
+
+<form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
+    <div class="row">
+        <div class="form-group">
+            <div class="col-md-2">
+                <label>Name: </label>
+            </div>
+            <div class="col-md-4">
+                <input class="form-control" name="name" ngModel required #name="ngModel">
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="row">
+        <div class="form-group">
+            <div class="col-md-2">
+                <label>Price: </label>
+            </div>
+            <div class="col-md-4">
+                <input class="form-control" name="price" ngModel required #price="ngModel">
+            </div>
+        </div>
+    </div>
+    <br/>
+    <button class="btn btn-primary">Submit</button>
+</form>
+<hr/>
+<div class="row">
+    <div class="form-group">
+        <div class="col-md-6">
+            <p>Response: <strong>{{responseStatus}}</strong></p>
+        </div>
+    </div>
+</div>
