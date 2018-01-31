@@ -16,12 +16,6 @@ namespace RedOwl.WebApi.Controllers
             this.productRepository = productRepository;
         }
 
-        [HttpGet("testendpoint")]
-        public async Task<IActionResult> GetTest()
-        {
-            return Ok("Ok");
-        }
-
         // GET api/getproducts
         [HttpGet("getproducts")]
         [EnableCors("AllowAll")]
